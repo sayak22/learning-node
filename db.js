@@ -1,6 +1,9 @@
 const mongoose= require('mongoose')
+require('dotenv').config();
 
-const mongoURL = 'mongodb://localhost:27017/hotels'
+// const mongoURL = process.env.LOCALDB_URL_LOCAL; // local mongoURL
+
+const mongoURL = process.env.MONGODB_URL; // MongoDB Atlas hosted cluster URL
 
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
