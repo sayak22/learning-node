@@ -5,6 +5,8 @@ const db = require("./db");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
+// Render hosted link: https://learning-node-vy9f.onrender.com
+
 //welcome message
 app.get("/", (req, res) => {
   res.send("Hello World!");
