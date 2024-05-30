@@ -30,7 +30,7 @@ router.get("/:worktype", async (req, res) => {
   try {
     const workType = req.params.worktype;
     if (workType == "chef" || workType == "manager" || workType == "waiter") {
-      const data = await Person.find({ workType: workType });
+      const data = await Person.find({ work: workType });
       console.log("data retrieved");
       res.status(200).json(data);
     } else {
